@@ -1,10 +1,12 @@
 public class Main {
     public static void main(String[] args) {
         int problema1 = somarMultiplos();
-        long problema2 = somarFibonacciImpar();
+        long problema2 = somarFibonacciPar();
+        long problema3 = maiorFatorPrimo();
 
         System.out.println(problema1);
         System.out.println(problema2);
+        System.out.println(problema3);
     }
 
     private static int somarMultiplos() {
@@ -38,4 +40,21 @@ public class Main {
 
         return soma;
     }
+
+    private static long maiorFatorPrimo(){
+        long fatorPrimo = 2;
+        long numero = 600851475143L;
+
+        while (numero > 1){
+            if(numero % fatorPrimo == 0){
+                numero = numero/fatorPrimo;
+            }
+            else{
+                fatorPrimo++;
+            }
+        }
+
+        return fatorPrimo;
+    }
+
 }
